@@ -1,0 +1,7 @@
+hypothesis,comparison,test,sample,p_value,effect
+"H1","Completion, programming C2 (harder) against the other 13 programming configurations","Fisher's exact test, one-sided","2/6 vs 77/78","3.81e-05","rate 0.33 vs 0.99"
+"H2p","Readiness, difficulty requests against redescription requests, programming","Mann-Whitney U, one-sided","n=12 vs n=66, U=36.0","1.07e-08","median 3.0 vs 5.0, rank-biserial -0.91"
+"H2q","Readiness, difficulty requests against redescription requests, quiz","Mann-Whitney U, one-sided","n=12 vs n=66, U=65.0","1.76e-08","median 4.0 vs 5.0, rank-biserial -0.84"
+"H3","Wall-clock time per run, programming against quiz","Mann-Whitney U, one-sided","n=84 vs n=84, U=5749.0","9.34e-13","median 6.8 vs 3.3 minutes, rank-biserial 0.63"
+"H4p","Wall-clock time, runs with repairs against runs without, programming","Mann-Whitney U, one-sided","n=64 vs n=20, U=1082.0","1.77e-06","median 7.5 vs 5.2 minutes, rank-biserial 0.69"
+"H4q","Wall-clock time, runs with repairs against runs without, quiz","Mann-Whitney U, one-sided","n=47 vs n=37, U=1688.0","8.52e-14","median 4.4 vs 2.4 minutes, rank-biserial 0.94"

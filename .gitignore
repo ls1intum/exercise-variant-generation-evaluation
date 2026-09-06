@@ -1,0 +1,11 @@
+# Written when the scripts run.
+__pycache__/
+*.pyc
+
+# Non-destructive staging directory of `reproduce.py`, compared against `output/` and then discarded.
+reproduced/
+
+venv/
+
+# Filled-in credentials for live-run/, if a reader configures it against an instance.
+live-run/config.ini
