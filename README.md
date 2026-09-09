@@ -53,11 +53,20 @@ python3 evaluation-scripts/hypothesis_tests.py    # output/hypothesis-tests.csv
 | | |
 |---|---|
 | Pipeline under test | Exercise variant generation in Artemis, branch `feature/exercise-variants-ai-generation`, prompts frozen at commit `f8bbc1b` |
+| AI framework | Spring AI 2.0.0 |
 | Generation model | `openai/gpt-oss-120b`, served by Logos at `https://logos.aet.cit.tum.de/v1`, temperature 0.2, no seed and no reasoning-effort setting |
 | Rating model | `claude-fable-5` through Claude Code at medium thinking effort, in a session that did not run the generations and did not write the prompts |
 | Design | 14 configurations × 2 exercise types × 6 replicates = 168 runs |
 | Run window | 2026-08-05T19:20Z to 2026-08-06T11:50Z, rated 2026-08-06 |
 | Hardware | Inference on the research group's GPU cluster; Artemis and one build agent on a MacBook Pro M1 Max, three generations in flight throughout |
+
+> [!WARNING]
+> **Token counts are a lower bound.** `total_tokens_used` in `results/runs.jsonl` and `tokens_median` in
+> `output/tables/cost.csv` understate what the runs consumed: a generation round is many model exchanges, and
+> Spring AI 2.0.0 reported the usage of only the last one of each round. The shortfall grows with the tool calls a
+> round made, so the token usage numbers cannot be scaled by a constant or compared between configurations. Spring
+> AI 2.0.1 counts the whole loop, so generating a variant today reports a far larger number for the same work.
+> No figure, hypothesis test, or rubric score uses tokens.
 
 ## What gets recomputed, and from what
 
